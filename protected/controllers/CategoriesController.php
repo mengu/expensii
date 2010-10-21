@@ -63,6 +63,7 @@ class CategoriesController extends Controller {
         // $this->performAjaxValidation($model);
 
         if (isset($_POST['Category'])) {
+            $_POST['category']['user_id'] = Yii::app()->user->id;
             $model->attributes = $_POST['Category'];
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->id));
@@ -117,7 +118,12 @@ class CategoriesController extends Controller {
      * Lists all models.
      */
     public function actionIndex() {
-        $dataProvider = new CActiveDataProvider('Category');
+        $dataProvider = new CActiveDataProvider('Category', array(
+            'criteria' => array(
+                'select' => "t.*, (SELECT SUM(cost) FROM expenses WHERE expenses.category_id = t.id) AS cost",
+                'order' => 'cost desc'
+            )
+        ));
         $this->render('index', array(
             'dataProvider' => $dataProvider,
         ));
