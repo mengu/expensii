@@ -19,7 +19,10 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'user_id',
+		array(
+                    'label' => 'User',
+                    'value' => $model->user->name
+                ),
 		array(
                     'label' => 'Category',
                     'value' => $model->category->name
