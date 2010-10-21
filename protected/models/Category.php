@@ -11,6 +11,8 @@
  */
 class Category extends CActiveRecord {
 
+    public $cost;
+
     /**
      * Returns the static model of the specified AR class.
      * @return Category the static model class
@@ -49,6 +51,9 @@ class Category extends CActiveRecord {
         // class name for the relations automatically generated below.
         return array(
             'expenses' => array(self::HAS_MANY, 'Expense', 'category_id'),
+            // that line helps me getting the costSum for each category.
+            // however, it is not possible to use it in ORDER BY clause so it's commented out.
+            //'costSum' => array(self::STAT, 'Expense', 'category_id', 'select'=>'SUM(cost)'),
         );
     }
 

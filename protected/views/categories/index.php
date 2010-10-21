@@ -11,7 +11,13 @@ $this->menu=array(
 
 <h1>Categories</h1>
 
+<table cellpadding="6" cellspacing="1">
+    <tr>
+        <th>Name</th>
+        <th>Total Cost</th>
+    </tr>
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
 )); ?>
+</table>
