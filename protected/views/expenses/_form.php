@@ -11,7 +11,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'category_id'); ?>
-		<?php echo $form->textField($model,'category_id'); ?>
+		<?php echo $form->dropDownList($model,'category_id', CHtml::listData(Category::model()->findAll(), 'id', 'name')); ?>
 		<?php echo $form->error($model,'category_id'); ?>
 	</div>
 
@@ -25,12 +25,6 @@
 		<?php echo $form->labelEx($model,'cost'); ?>
 		<?php echo $form->textField($model,'cost'); ?>
 		<?php echo $form->error($model,'cost'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'dateline'); ?>
-		<?php echo $form->textField($model,'dateline'); ?>
-		<?php echo $form->error($model,'dateline'); ?>
 	</div>
 
 	<div class="row buttons">
