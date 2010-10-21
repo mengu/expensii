@@ -37,9 +37,6 @@ return array(
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ),
         ),
-        'db' => array(
-            'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/testdrive.db',
-        ),
         // uncomment the following to use a MySQL database
         'db' => array(
             'connectionString' => 'mysql:host=localhost;dbname=yii_expenses',
@@ -47,6 +44,10 @@ return array(
             'username' => 'root',
             'password' => 's',
             'charset' => 'utf8',
+        ),
+        'authManager'=>array(
+            'class'=>'CDbAuthManager',
+            'connectionID'=>'db',
         ),
         'errorHandler' => array(
             // use 'site/error' action to display errors
