@@ -119,11 +119,11 @@ class CategoriesController extends Controller {
      */
     public function actionIndex() {
         $dataProvider = new CActiveDataProvider('Category', array(
-            'criteria' => array(
-                'select' => "t.*, (SELECT SUM(cost) FROM expenses WHERE expenses.category_id = t.id) AS cost",
-                'order' => 'cost desc'
-            )
-        ));
+                    'criteria' => array(
+                        'select' => "t.*, (SELECT SUM(cost) FROM expenses WHERE expenses.category_id = t.id) AS cost",
+                        'order' => 'cost desc'
+                    )
+                ));
         $this->render('index', array(
             'dataProvider' => $dataProvider,
         ));
