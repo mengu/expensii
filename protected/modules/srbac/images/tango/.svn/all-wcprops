@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/191/trunk/protected/modules/srbac/images/tango
+END
+allow.png
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/116/trunk/protected/modules/srbac/images/tango/allow.png
+END
+wizard.png
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/28/trunk/protected/modules/srbac/images/tango/wizard.png
+END
+eraser.png
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/191/trunk/protected/modules/srbac/images/tango/eraser.png
+END
+users.png
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/28/trunk/protected/modules/srbac/images/tango/users.png
+END
+preview.png
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/28/trunk/protected/modules/srbac/images/tango/preview.png
+END
+update.png
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/28/trunk/protected/modules/srbac/images/tango/update.png
+END
+delete.png
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/28/trunk/protected/modules/srbac/images/tango/delete.png
+END
+create.png
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/28/trunk/protected/modules/srbac/images/tango/create.png
+END
+usersAssign.png
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/28/trunk/protected/modules/srbac/images/tango/usersAssign.png
+END
+help.png
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/101/trunk/protected/modules/srbac/images/tango/help.png
+END
+admin.png
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/28/trunk/protected/modules/srbac/images/tango/admin.png
+END
+manageAuth.png
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/28/trunk/protected/modules/srbac/images/tango/manageAuth.png
+END

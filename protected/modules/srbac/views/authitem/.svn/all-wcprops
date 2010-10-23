@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/213/trunk/protected/modules/srbac/views/authitem
+END
+userAssignments.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/57/trunk/protected/modules/srbac/views/authitem/userAssignments.php
+END
+assignments.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/205/trunk/protected/modules/srbac/views/authitem/assignments.php
+END
+footer.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/176/trunk/protected/modules/srbac/views/authitem/footer.php
+END
+unauthorized.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/57/trunk/protected/modules/srbac/views/authitem/unauthorized.php
+END
+assign.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/187/trunk/protected/modules/srbac/views/authitem/assign.php
+END
+frontpage.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/176/trunk/protected/modules/srbac/views/authitem/frontpage.php
+END
+saveAllowed.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/150/trunk/protected/modules/srbac/views/authitem/saveAllowed.php
+END
+allowed.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/189/trunk/protected/modules/srbac/views/authitem/allowed.php
+END
+header.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/102/trunk/protected/modules/srbac/views/authitem/header.php
+END
+admin.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/176/trunk/protected/modules/srbac/views/authitem/admin.php
+END

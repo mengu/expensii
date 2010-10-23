@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/213/trunk/protected/modules/srbac/views/authitem/manage
+END
+list.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/203/trunk/protected/modules/srbac/views/authitem/manage/list.php
+END
+obsoleteRemoved.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/195/trunk/protected/modules/srbac/views/authitem/manage/obsoleteRemoved.php
+END
+wizard.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/177/trunk/protected/modules/srbac/views/authitem/manage/wizard.php
+END
+show.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/213/trunk/protected/modules/srbac/views/authitem/manage/show.php
+END
+update.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/57/trunk/protected/modules/srbac/views/authitem/manage/update.php
+END
+_form.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/176/trunk/protected/modules/srbac/views/authitem/manage/_form.php
+END
+create.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/57/trunk/protected/modules/srbac/views/authitem/manage/create.php
+END
+clearObsolete.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/195/trunk/protected/modules/srbac/views/authitem/manage/clearObsolete.php
+END
+createItems.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/176/trunk/protected/modules/srbac/views/authitem/manage/createItems.php
+END
+manage.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/198/trunk/protected/modules/srbac/views/authitem/manage/manage.php
+END

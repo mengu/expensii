@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/217/trunk/protected/modules/srbac/controllers
+END
+SBaseController.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/210/trunk/protected/modules/srbac/controllers/SBaseController.php
+END
+AuthitemController.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/217/trunk/protected/modules/srbac/controllers/AuthitemController.php
+END
+DefaultController.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/57/trunk/protected/modules/srbac/controllers/DefaultController.php
+END

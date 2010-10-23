@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/200/trunk/protected/modules/srbac/views/authitem/install
+END
+error.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/57/trunk/protected/modules/srbac/views/authitem/install/error.php
+END
+installText.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/62/trunk/protected/modules/srbac/views/authitem/install/installText.php
+END
+install.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/200/trunk/protected/modules/srbac/views/authitem/install/install.php
+END
+overwrite.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/176/trunk/protected/modules/srbac/views/authitem/install/overwrite.php
+END
+success.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/176/trunk/protected/modules/srbac/views/authitem/install/success.php
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/178/trunk/protected/modules/srbac/views/authitem/tabViews
+END
+userAjax.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/178/trunk/protected/modules/srbac/views/authitem/tabViews/userAjax.php
+END
+roleToUser.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/178/trunk/protected/modules/srbac/views/authitem/tabViews/roleToUser.php
+END
+roleAjax.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/178/trunk/protected/modules/srbac/views/authitem/tabViews/roleAjax.php
+END
+operationToTask.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/178/trunk/protected/modules/srbac/views/authitem/tabViews/operationToTask.php
+END
+taskAjax.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/178/trunk/protected/modules/srbac/views/authitem/tabViews/taskAjax.php
+END
+taskToRole.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/178/trunk/protected/modules/srbac/views/authitem/tabViews/taskToRole.php
+END
