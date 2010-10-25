@@ -47,8 +47,12 @@ class CategoriesController extends Controller {
      * @param integer $id the ID of the model to be displayed
      */
     public function actionView($id) {
+        $select = array(
+            'select' => "t.*, (SELECT SUM(cost) FROM expenses WHERE expenses.category_id = t.id) AS cost"
+        );
+        $category = Category::model()->find($select, array('id' => $id));
         $this->render('view', array(
-            'model' => $this->loadModel($id),
+            'model' => $category
         ));
     }
 
