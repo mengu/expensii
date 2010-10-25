@@ -29,7 +29,7 @@ class ExpensesController extends Controller {
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'update'),
+                'actions' => array('create', 'update', 'paid'),
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -137,6 +137,16 @@ class ExpensesController extends Controller {
         $this->render('admin', array(
             'model' => $model,
         ));
+    }
+
+    public function actionPaid($id) {
+        if (Yii::app()->user->checkAccess('updateExpense')) {
+            $expense = $this->loadModel($id);
+            $expense->attributes = $_POST['Expense'];
+            $expense->save();
+            echo $expense->paid ? 'Yes' : 'No';
+            Yii::app()->end();
+        }
     }
 
     /**

@@ -29,6 +29,7 @@ $this->menu=array(
                 ),
 		'expense_name',
 		'cost',
+                'paid',
 		'dateline',
 	),
 )); ?>

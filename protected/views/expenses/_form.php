@@ -27,6 +27,12 @@
 		<?php echo $form->error($model,'cost'); ?>
 	</div>
 
+        <div class="row">
+		<?php echo $form->labelEx($model,'paid'); ?>
+		<input type="radio" name="Expense[paid]" value="1" /> Yes <input type="radio" name="Expense[paid]" value="0" /> No
+		<?php echo $form->error($model,'cost'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

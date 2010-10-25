@@ -15,6 +15,22 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("a[id^='paid_']").click(function() {
+                var elm = $(this);
+                var id = this.id.match(/\d+/i)[0];
+                var paid = $(this).text() == 'Yes' ? 0 : 1;
+                $.post('/expensii/expenses/paid/'+id, {'Expense[paid]': paid}, function(r){
+                    elm.text(r);
+                });
+                return false;
+
+            });
+        });
+        </script>
+
 </head>
 
 <body>

@@ -30,6 +30,11 @@
 		<?php echo $form->textField($model,'cost'); ?>
 	</div>
 
+        <div class="row">
+		<?php echo $form->labelEx($model,'paid'); ?>
+		<input type="radio" name="Expense[paid]" value="1" /> Yes <input type="radio" name="Expense[paid]" value="0" /> No
+	</div>
+
 	<div class="row">
 		<?php echo $form->label($model,'dateline'); ?>
 		<?php echo $form->textField($model,'dateline'); ?>

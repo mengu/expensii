@@ -9,6 +9,7 @@
  * @property integer $category_id
  * @property string $expense_name
  * @property double $cost
+ * @property boolean $paid
  * @property integer $dateline
  *
  * The followings are the available model relations:
@@ -41,9 +42,10 @@ class Expense extends CActiveRecord {
             array('user_id, category_id, dateline', 'numerical', 'integerOnly' => true),
             array('cost', 'numerical'),
             array('expense_name', 'length', 'max' => 100),
+            array('paid', 'length', 'max' => 1),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, user_id, category_id, expense_name, cost, dateline', 'safe', 'on' => 'search'),
+            array('id, user_id, category_id, expense_name, cost, paid, dateline', 'safe', 'on' => 'search'),
         );
     }
 
@@ -70,6 +72,7 @@ class Expense extends CActiveRecord {
             'expense_name' => 'Expense Name',
             'cost' => 'Cost',
             'dateline' => 'Dateline',
+            'paid' => 'Paid'
         );
     }
 
@@ -89,6 +92,7 @@ class Expense extends CActiveRecord {
         $criteria->compare('expense_name', $this->expense_name, true);
         $criteria->compare('cost', $this->cost);
         $criteria->compare('dateline', $this->dateline);
+        $criteria->compare('paid', $this->paid);
 
         return new CActiveDataProvider(get_class($this), array(
             'criteria' => $criteria,

@@ -17,6 +17,7 @@ $this->menu=array(
     <th>Category</th>
     <th>User</th>
     <th>Cost</th>
+    <th>Paid</th>
     <th>When</th>
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
