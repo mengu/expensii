@@ -120,6 +120,7 @@ CREATE TABLE IF NOT EXISTS `expenses` (
   `category_id` int(11) NOT NULL,
   `expense_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `cost` double NOT NULL,
+  `paid` tinyint(1) NOT NULL,
   `dateline` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=22 ;
