@@ -1,5 +1,5 @@
 <tr>
-    <td><?php echo CHtml::encode($data->expense_name); ?></td>
+    <td><a href="<?= CController::createUrl('expenses/view/'.$data->id) ?>"><?php echo CHtml::encode($data->expense_name); ?></a></td>
     <td><a href="<?= CController::createUrl('categories/view/'.$data->category_id) ?>"><?php echo CHtml::encode($data->category->name); ?></a></td>
     <td><?php echo CHtml::encode($data->user->name); ?></td>
     <td><?php echo CHtml::encode($data->cost); ?></td>
