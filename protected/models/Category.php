@@ -84,11 +84,6 @@ class Category extends CActiveRecord {
             'criteria' => $criteria,
         ));
     }
-
-    public function cost() {
-        $result = Expense::model()->findBySql("SELECT SUM(cost) AS cost FROM expenses WHERE category_id = :id", array(':id' => $this->id));
-        return $result->cost;
-    }
     
     public function getTotalExpenseCost($dataProvider) {
         $categories = $dataProvider->getData();
