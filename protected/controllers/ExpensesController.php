@@ -121,7 +121,9 @@ class ExpensesController extends Controller {
      * Lists all models.
      */
     public function actionIndex() {
-        $dataProvider = new CActiveDataProvider('Expense');
+        $dataProvider = new CActiveDataProvider('Expense',
+            array('pagination' => array('pageSize' => 20))
+        );
         $this->render('index', array(
             'dataProvider' => $dataProvider,
         ));
