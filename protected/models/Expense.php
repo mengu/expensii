@@ -40,12 +40,14 @@ class Expense extends CActiveRecord {
         return array(
             array('user_id, category_id, expense_name, cost, dateline', 'required'),
             array('user_id, category_id, dateline', 'numerical', 'integerOnly' => true),
+            array('quantity', 'numerical'),
             array('cost', 'numerical'),
+            array('totalcost', 'numerical'),
             array('expense_name', 'length', 'max' => 100),
             array('paid', 'length', 'max' => 1),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, user_id, category_id, expense_name, cost, paid, dateline', 'safe', 'on' => 'search'),
+            array('id, user_id, category_id, expense_name, quantity, cost, totalcost, paid, dateline', 'safe', 'on' => 'search'),
         );
     }
 
@@ -70,7 +72,9 @@ class Expense extends CActiveRecord {
             'user_id' => 'User',
             'category_id' => 'Category',
             'expense_name' => 'Expense Name',
+            'quantity' => 'Quantity',
             'cost' => 'Cost',
+            'totalcost' => 'Total Cost',
             'dateline' => 'Dateline',
             'paid' => 'Paid'
         );
@@ -90,7 +94,9 @@ class Expense extends CActiveRecord {
         $criteria->compare('user_id', $this->user_id);
         $criteria->compare('category_id', $this->category_id);
         $criteria->compare('expense_name', $this->expense_name, true);
+        $criteria->compare('quantity', $this->quantity);
         $criteria->compare('cost', $this->cost);
+        $criteria->compare('totalcost', $this->totalcost);
         $criteria->compare('dateline', $this->dateline);
         $criteria->compare('paid', $this->paid);
 

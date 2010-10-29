@@ -106,7 +106,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -119,11 +119,13 @@ CREATE TABLE IF NOT EXISTS `expenses` (
   `user_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
   `expense_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `quantity` int(11) NOT NULL,
   `cost` double NOT NULL,
+  `totalcost` int(11) NOT NULL,
   `paid` tinyint(1) NOT NULL,
   `dateline` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=22 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -137,4 +139,4 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

@@ -65,6 +65,7 @@ class ExpensesController extends Controller {
         if (isset($_POST['Expense'])) {
             $_POST['Expense']['user_id'] = Yii::app()->user->id;
             $_POST['Expense']['dateline'] = time();
+            $_POST['Expense']['totalcost'] = $_POST['Expense']['cost']*$_POST['Expense']['quantity'];
             $model->attributes = $_POST['Expense'];
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->id));
@@ -87,6 +88,7 @@ class ExpensesController extends Controller {
         // $this->performAjaxValidation($model);
 
         if (isset($_POST['Expense'])) {
+            $_POST['Expense']['totalcost'] = $_POST['Expense']['cost']*$_POST['Expense']['quantity'];
             $model->attributes = $_POST['Expense'];
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->id));
@@ -139,6 +141,11 @@ class ExpensesController extends Controller {
         ));
     }
 
+    /*
+     * Marks an expense as paid or unpaid.
+     * 
+     * @param    int    Expense id.
+     */
     public function actionPaid($id) {
         if (Yii::app()->user->checkAccess('updateExpense')) {
             $expense = $this->loadModel($id);

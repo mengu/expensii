@@ -22,6 +22,12 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'quantity'); ?>
+		<?php echo $form->textField($model,'quantity',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->error($model,'quantity'); ?>
+	</div>
+	
+	<div class="row">
 		<?php echo $form->labelEx($model,'cost'); ?>
 		<?php echo $form->textField($model,'cost'); ?>
 		<?php echo $form->error($model,'cost'); ?>

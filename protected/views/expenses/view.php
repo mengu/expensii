@@ -19,7 +19,8 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		array(
+		// user info
+        array(
                     'label' => 'User',
                     'value' => $model->user->name
                 ),
@@ -28,8 +29,17 @@ $this->menu=array(
                     'value' => $model->category->name
                 ),
 		'expense_name',
-		'cost',
-                'paid',
-		'dateline',
+        'quantity',
+		'totalcost',
+        // is the expense paid?
+		array(
+			'label' => 'Paid',
+		    'value' => $model->paid ? "Yes" : "No"
+		),
+		// convert dateline to a human readable one.
+		array(
+		    'label' => 'Date',
+		    'value' => date("Y/m/d h:i a", $model->dateline)
+		)
 	),
 )); ?>
