@@ -35,7 +35,7 @@
 
         <div class="row">
 		<?php echo $form->labelEx($model,'paid'); ?>
-		<input type="radio" name="Expense[paid]" value="1" /> Yes <input type="radio" name="Expense[paid]" value="0" /> No
+		<input type="radio" name="Expense[paid]" value="1" <?= $model->paid ? "checked" : "" ?>/> Yes <input type="radio" name="Expense[paid]" value="0" <?= !$model->paid ? "checked" : "" ?>/> No
 		<?php echo $form->error($model,'cost'); ?>
 	</div>
 
