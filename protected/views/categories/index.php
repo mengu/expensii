@@ -11,6 +11,8 @@ $this->menu=array(
 
 <h1>Categories</h1>
 
+<h2>Total Expense Cost: <?= Category::model()->getTotalExpenseCost($dataProvider) ?></h2>
+
 <table cellpadding="6" cellspacing="1">
     <tr>
         <th>Name</th>

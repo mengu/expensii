@@ -11,7 +11,7 @@
  */
 class Category extends CActiveRecord {
 
-    public $cost;
+    public $totalcost;
 
     /**
      * Returns the static model of the specified AR class.
@@ -89,5 +89,14 @@ class Category extends CActiveRecord {
         $result = Expense::model()->findBySql("SELECT SUM(cost) AS cost FROM expenses WHERE category_id = :id", array(':id' => $this->id));
         return $result->cost;
     }
+    
+    public function getTotalExpenseCost($dataProvider) {
+        $categories = $dataProvider->getData();
+        $totalCost = 0;
+        foreach ($categories AS $category) {
+            $totalCost += $category->totalcost;
+        }
+        return $totalCost;
+    } 
 
 }

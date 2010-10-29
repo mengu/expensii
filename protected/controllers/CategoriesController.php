@@ -48,7 +48,7 @@ class CategoriesController extends Controller {
      */
     public function actionView($id) {
         $select = array(
-            'select' => "t.*, (SELECT SUM(cost) FROM expenses WHERE expenses.category_id = t.id) AS cost"
+            'select' => "t.*, (SELECT SUM(totalcost) FROM expenses WHERE expenses.category_id = t.id) AS totalcost"
         );
         $category = Category::model()->find($select, array('id' => $id));
         $this->render('view', array(
@@ -124,8 +124,8 @@ class CategoriesController extends Controller {
     public function actionIndex() {
         $dataProvider = new CActiveDataProvider('Category', array(
                     'criteria' => array(
-                        'select' => "t.*, (SELECT SUM(cost) FROM expenses WHERE expenses.category_id = t.id) AS cost",
-                        'order' => 'cost desc'
+                        'select' => "t.*, (SELECT SUM(totalcost) FROM expenses WHERE expenses.category_id = t.id) AS totalcost",
+                        'order' => 'totalcost desc'
                     )
                 ));
         $this->render('index', array(
