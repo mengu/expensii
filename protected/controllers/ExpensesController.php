@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL);
+
 class ExpensesController extends Controller {
 
     /**
