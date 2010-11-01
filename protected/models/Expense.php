@@ -31,6 +31,19 @@ class Expense extends CActiveRecord {
         return 'expenses';
     }
 
+    public function beforeSave() {
+        parent::beforeSave();
+        if($this->isNewRecord)
+        {
+            $this->dateline = time();
+            $this->user_id=Yii::app()->user->id;
+        }
+        $this->totalcost = $this->cost * $this->quantity;
+        $this->balance = $this->totalcost - $this->upfront;
+        $this->balance = $this->balance == 0 ? $this->totalcost : $this->balance;
+        return true;
+    }
+
     /**
      * @return array validation rules for model attributes.
      */
@@ -38,16 +51,20 @@ class Expense extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('user_id, category_id, expense_name, cost, dateline', 'required'),
+            array('user_id, category_id, expense_name, cost', 'required'),
             array('user_id, category_id, dateline', 'numerical', 'integerOnly' => true),
-            array('quantity', 'numerical'),
+            array('quantity', 'numerical', ),
+            array('upfront', 'numerical'),
+            array('balance', 'numerical'),
             array('cost', 'numerical'),
             array('totalcost', 'numerical'),
             array('expense_name', 'length', 'max' => 100),
             array('paid', 'length', 'max' => 1),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, user_id, category_id, expense_name, quantity, cost, totalcost, paid, dateline', 'safe', 'on' => 'search'),
+            array('id, user_id, category_id, expense_name, 
+                quantity, upfront, balance, cost, totalcost,
+                paid, dateline', 'safe', 'on' => 'search'),
         );
     }
 
@@ -73,6 +90,8 @@ class Expense extends CActiveRecord {
             'category_id' => 'Category',
             'expense_name' => 'Expense Name',
             'quantity' => 'Quantity',
+            'upfront' => 'Upfront',
+            'balance' => 'Balance',
             'cost' => 'Cost',
             'totalcost' => 'Total Cost',
             'dateline' => 'Dateline',
@@ -95,6 +114,8 @@ class Expense extends CActiveRecord {
         $criteria->compare('category_id', $this->category_id);
         $criteria->compare('expense_name', $this->expense_name, true);
         $criteria->compare('quantity', $this->quantity);
+        $criteria->compare('upfront', $this->upfront);
+        $criteria->compare('balance', $this->balance);
         $criteria->compare('cost', $this->cost);
         $criteria->compare('totalcost', $this->totalcost);
         $criteria->compare('dateline', $this->dateline);

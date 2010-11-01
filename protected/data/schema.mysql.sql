@@ -120,6 +120,8 @@ CREATE TABLE IF NOT EXISTS `expenses` (
   `category_id` int(11) NOT NULL,
   `expense_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `quantity` int(11) NOT NULL,
+  `upfront` int(11) NOT NULL,
+  `balance` int(11) NOT NULL,
   `cost` double NOT NULL,
   `totalcost` int(11) NOT NULL,
   `paid` tinyint(1) NOT NULL,

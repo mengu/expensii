@@ -5,6 +5,8 @@
     <td><?php echo CHtml::encode($data->quantity); ?></td>
     <td><?php echo CHtml::encode($data->cost); ?></td>
     <td><?php echo CHtml::encode($data->totalcost); ?></td>
+    <td><?php echo CHtml::encode($data->upfront); ?></td>
+    <td><?php echo CHtml::encode($data->balance); ?></td>
     <td><a id="paid_<?= $data->id ?>" href="#"><?php echo CHtml::encode($data->paid ? 'Yes' : 'No'); ?></a></td>
     <td><?php echo CHtml::encode(date("d/m/Y h:i A", $data->dateline)); ?></td>
 </tr>

@@ -19,6 +19,8 @@ $this->menu=array(
     <th>Quantity</th>
     <th>Cost</th>
     <th>Total Cost</th>
+    <th>Upfront</th>
+    <th>Balance</th>
     <th>Paid</th>
     <th>When</th>
 <?php $this->widget('zii.widgets.CListView', array(
