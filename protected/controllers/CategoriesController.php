@@ -48,7 +48,9 @@ class CategoriesController extends Controller {
      */
     public function actionView($id) {
         $select = array(
-            'select' => "t.*, (SELECT SUM(totalcost) FROM expenses WHERE expenses.category_id = t.id) AS totalcost",
+            'select' => "t.*, 
+                (SELECT SUM(totalcost) FROM expenses WHERE expenses.category_id = t.id) AS totalcost,
+                (SELECT SUM(balance) FROM expenses WHERE expenses.category_id = t.id AND paid = 1) AS balance",
             'condition' => 'id = :id',
             'params' => array(':id' => $id)
         );
@@ -126,8 +128,10 @@ class CategoriesController extends Controller {
     public function actionIndex() {
         $dataProvider = new CActiveDataProvider('Category', array(
                     'criteria' => array(
-                        'select' => "t.*, (SELECT SUM(totalcost) FROM expenses WHERE expenses.category_id = t.id) AS totalcost",
-                        'order' => 'totalcost desc'
+                        'select' => "t.*, 
+                            (SELECT SUM(totalcost) FROM expenses WHERE expenses.category_id = t.id) AS totalcost,
+                            (SELECT SUM(balance) FROM expenses WHERE expenses.category_id = t.id AND paid = 1) AS balance",
+                        'order' => 'balance desc'
                     )
                 ));
         $this->render('index', array(

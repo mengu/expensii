@@ -12,6 +12,7 @@
 class Category extends CActiveRecord {
 
     public $totalcost;
+    public $balance;
 
     /**
      * Returns the static model of the specified AR class.
@@ -92,6 +93,5 @@ class Category extends CActiveRecord {
             $totalCost += $category->totalcost;
         }
         return $totalCost;
-    } 
-
+    }
 }

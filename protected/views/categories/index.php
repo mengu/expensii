@@ -17,6 +17,7 @@ $this->menu=array(
     <tr>
         <th>Name</th>
         <th>Total Cost</th>
+        <th>Total Paid Cost</th>
     </tr>
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
